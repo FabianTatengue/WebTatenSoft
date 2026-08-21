@@ -1,42 +1,402 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="TatenSoft: software simple para negocios reales. Sistemas web a medida para pequeños comercios y emprendimientos.">
-<meta name="theme-color" content="#183b8f">
-<title>TatenSoft · Software simple para negocios reales</title>
-<style>
-:root{--bg:#f6f8fc;--surface:#fff;--ink:#10213d;--muted:#64748b;--brand:#2856c7;--brand2:#6f8fe9;--soft:#e7edff;--line:#dce4f0;--dark:#0d1d36;--shadow:0 24px 70px rgba(31,54,105,.12);--r:28px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
-.nav{position:sticky;top:0;z-index:50;background:rgba(246,248,252,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,228,240,.9)}.nav-in{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:-.035em;font-size:1.38rem}.mark{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#315bd1,#17357d);display:grid;place-items:center;box-shadow:0 10px 26px rgba(36,75,184,.25)}.mark svg{width:28px}.brand b{color:var(--brand)}.navlinks{display:flex;gap:22px;align-items:center;color:#42516b;font-weight:700;font-size:.94rem}.navcta{padding:11px 16px;border-radius:999px;background:var(--dark);color:#fff}
-.hero{padding:80px 0 66px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:var(--soft);color:#284a9d;font-weight:800;font-size:.86rem}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand)}h1{font-size:clamp(3.1rem,7vw,6.2rem);line-height:.94;letter-spacing:-.065em;margin:22px 0}.accent{color:var(--brand)}.lead{font-size:clamp(1.08rem,2vw,1.34rem);color:#53627b;max-width:680px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:15px;font-weight:800;border:1px solid var(--line);background:#fff}.primary{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 14px 30px rgba(36,75,184,.22)}.micro{margin-top:18px;color:#718096;font-size:.93rem}
-.hero-visual{position:relative;min-height:540px}.glow{position:absolute;inset:10% -12% 4% 5%;background:radial-gradient(circle at center,rgba(111,143,233,.28),transparent 68%);filter:blur(18px)}.phone{position:absolute;background:#fff;border:1px solid #d8e1ef;border-radius:28px;padding:9px;overflow:hidden;box-shadow:var(--shadow)}.phone img{width:100%;height:100%;object-fit:fill;object-position:top;border-radius:20px}.phone.main{width:60%;height:490px;right:4%;top:8px;transform:rotate(2deg)}.phone.small{width:44%;height:350px;left:3%;bottom:0;transform:rotate(-4deg);z-index:2}.phone:after{content:"";position:absolute;inset:0;border-radius:28px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.45);pointer-events:none}
-section{padding:78px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}.kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);font-weight:900}.section-head h2{font-size:clamp(2.2rem,4vw,3.8rem);line-height:1;letter-spacing:-.05em;margin:8px 0 0}.section-head p{max-width:520px;margin:0;color:var(--muted);font-size:1.04rem}
-.projects{display:grid;gap:24px}.project{display:grid;grid-template-columns:.9fr 1.1fr;min-height:500px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 14px 44px rgba(31,54,105,.07)}.project:nth-child(even){grid-template-columns:1.1fr .9fr}.project:nth-child(even) .copy{order:2}.copy{padding:42px;display:flex;flex-direction:column;justify-content:center}.project h3{font-size:clamp(2rem,4vw,3.1rem);line-height:1.02;letter-spacing:-.045em;margin:10px 0 16px}.project p{color:#596981;font-size:1.04rem;margin:0 0 22px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:8px 11px;border-radius:999px;background:#f1f5fb;color:#40516d;font-size:.85rem;font-weight:750;border:1px solid #e4eaf3}
-.media{position:relative;display:grid;place-items:center;padding:28px;overflow:hidden;background:linear-gradient(145deg,#e9effb,#dce6fa)}.media.ro{background:linear-gradient(145deg,#dce8ff,#c7d8ff)}.media.almacen{background:linear-gradient(145deg,#edf7fb,#dcedf5)}.media.mariel{background:linear-gradient(145deg,#fff1e7,#f8dfda)}.media.mr{background:linear-gradient(145deg,#171717,#050505)}.device{width:min(92%,390px);height:430px;background:#fff;border-radius:26px;padding:8px;box-shadow:0 24px 54px rgba(23,53,125,.18);overflow:hidden}.device img{width:100%;height:100%;object-fit:fill;object-position:top;border-radius:19px}.device.secondary{position:absolute;width:36%;height:300px;right:4%;bottom:20px;transform:rotate(4deg)}.media.ro .device:first-child{transform:translateX(-10%)}
-.dev-note{margin-top:24px;border:1px dashed #bdc9dd;border-radius:22px;padding:22px 24px;background:rgba(255,255,255,.6);display:flex;gap:16px;align-items:center}.dev-note strong{display:block}.dev-note span{color:var(--muted)}
-.approach{background:var(--dark);color:#fff;border-radius:34px;padding:52px;position:relative;overflow:hidden}.approach:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(111,143,233,.18);right:-160px;top:-220px}.approach h2{font-size:clamp(2.4rem,5vw,4.5rem);line-height:.98;letter-spacing:-.055em;max-width:840px;margin:10px 0 16px}.approach>p{color:#b8c5da;max-width:700px;font-size:1.08rem}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px;position:relative;z-index:1}.step{padding:23px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}.num{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:#dfe8ff;color:#17357d;font-weight:900;margin-bottom:18px}.step h4{font-size:1.1rem;margin:0 0 7px}.step p{margin:0;color:#aebdd4;font-size:.94rem}
-.contact{padding-bottom:105px}.contact-card{background:linear-gradient(145deg,#edf3ff,#fff);border:1px solid var(--line);border-radius:34px;padding:54px;text-align:center}.contact-card h2{font-size:clamp(2.4rem,5vw,4.5rem);line-height:.98;letter-spacing:-.055em;margin:8px auto 18px;max-width:880px}.contact-card p{color:var(--muted);font-size:1.07rem;max-width:650px;margin:0 auto 26px}footer{border-top:1px solid var(--line);padding:28px 0;color:#718096;font-size:.92rem}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-@media(max-width:900px){.navlinks a:not(.navcta){display:none}.hero{padding-top:52px}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-visual{min-height:455px}.phone.main{height:405px;width:62%}.phone.small{height:285px;width:46%}.project,.project:nth-child(even){grid-template-columns:1fr}.project:nth-child(even) .copy{order:0}.media{min-height:440px}.steps{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
-@media(max-width:620px){.wrap{width:min(100% - 24px,1160px)}.nav-in{height:70px}.brand{font-size:1.18rem}.mark{width:42px;height:42px;border-radius:12px}.navcta{padding:9px 12px;font-size:.88rem}.hero{padding:42px 0 38px}h1{font-size:clamp(3rem,15vw,4.4rem)}.actions .btn{width:100%}.micro{line-height:1.7}.hero-visual{min-height:390px}.phone.main{width:68%;height:345px;right:0}.phone.small{width:50%;height:240px;left:0}.section-head{margin-bottom:24px}section{padding:56px 0}.copy{padding:28px 23px}.media{padding:18px;min-height:355px}.device{height:330px;width:82%}.device.secondary{height:225px;width:38%;right:1%;bottom:12px}.media.ro .device:first-child{transform:translateX(-8%)}.approach{padding:34px 24px;border-radius:26px}.contact-card{padding:38px 22px;border-radius:26px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TatenSoft desarrolla sistemas web, páginas y software a medida para negocios reales. Ventas, stock, pedidos, clientes y catálogos desde cualquier dispositivo.">
+  <meta name="theme-color" content="#f5f8ff">
+  <meta property="og:title" content="TatenSoft · Software a medida para negocios reales">
+  <meta property="og:description" content="Tu negocio no necesita otro sistema complicado. Necesita uno pensado para vos.">
+  <meta property="og:image" content="https://fabiantatengue.github.io/WebTatenSoft/assets/escena-dispositivos.webp">
+  <title>TatenSoft · Software que mueve tu negocio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f8ff;
+      --surface: #ffffff;
+      --surface-2: #edf3ff;
+      --ink: #172645;
+      --muted: #60718b;
+      --line: rgba(48, 80, 137, .13);
+      --blue: #365fd1;
+      --cyan: #137eaf;
+      --green: #20a979;
+      --violet: #7561ce;
+      --radius: 30px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 94px; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.58;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ::selection { color: white; background: rgba(54, 95, 209, .72); }
+    .wrap { width: min(1240px, calc(100% - 56px)); margin-inline: auto; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 250, 255, .86);
+      backdrop-filter: blur(20px);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 82px; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 13px; font-size: 1.62rem; font-weight: 830; letter-spacing: -.075em; }
+    .brand-mark {
+      display: grid;
+      flex: 0 0 auto;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 1px solid rgba(151, 176, 255, .3);
+      border-radius: 15px;
+      background: linear-gradient(145deg, #517cf2, #203887);
+      box-shadow: 0 12px 35px rgba(66, 104, 224, .24);
+    }
+    .brand-mark svg { width: 30px; height: 30px; }
+    .brand strong { color: #365fd1; }
+    .nav-links { display: flex; align-items: center; gap: 28px; color: #51627e; font-size: .92rem; font-weight: 670; }
+    .nav-links > a:not(.nav-contact):hover { color: #264db6; }
+    .nav-contact { padding: 10px 17px; border: 1px solid rgba(64, 99, 200, .18); border-radius: 12px; background: rgba(76, 116, 226, .09); color: #284cad; }
+
+    .hero { position: relative; padding: 90px 0 64px; overflow: clip; }
+    .hero::before {
+      position: absolute;
+      z-index: -1;
+      top: -190px;
+      right: -190px;
+      width: 760px;
+      height: 760px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(92, 132, 243, .19), transparent 67%);
+      content: "";
+    }
+    .hero-grid { display: grid; grid-template-columns: .83fr 1.17fr; align-items: center; gap: 50px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #3f60bc; font-size: .79rem; font-weight: 780; letter-spacing: .125em; text-transform: uppercase; }
+    .eyebrow::before { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 18px rgba(101, 232, 164, .75); content: ""; }
+    h1 { margin: 22px 0 19px; font-size: clamp(3.8rem, 7.3vw, 6.2rem); font-weight: 820; letter-spacing: -.093em; line-height: .94; }
+    .gradient-text { color: #365fd1; background: linear-gradient(100deg, #355bcb, #168dba 76%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .lead { max-width: 510px; color: var(--muted); font-size: 1.1rem; line-height: 1.76; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; min-height: 53px; align-items: center; justify-content: center; gap: 10px; padding: 0 20px; border: 1px solid var(--line); border-radius: 13px; background: white; font-size: .93rem; font-weight: 760; transition: transform .22s ease, border-color .22s ease, background .22s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { border-color: transparent; background: linear-gradient(135deg, #557ff0, #385dce); color: white; box-shadow: 0 13px 36px rgba(73, 108, 226, .22); }
+    .button-whatsapp { border-color: rgba(28, 159, 104, .19); background: #effaf4; color: #127d50; }
+    .button svg, .contact-link svg { width: 19px; height: 19px; }
+    .micro { margin-top: 22px; color: #697a94; font-size: .88rem; }
+
+    .hero-visual { position: relative; min-width: 0; }
+    .scene { position: relative; overflow: hidden; aspect-ratio: 3 / 2; border: 1px solid rgba(57, 91, 161, .16); border-radius: 25px; background: #101c34; box-shadow: 0 26px 70px rgba(42, 68, 122, .22); }
+    .scene-background { width: 100%; height: 100%; object-fit: cover; }
+    .screen { position: absolute; overflow: hidden; background: #0e1420; }
+    .screen img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .screen-laptop { top: 17.4%; left: 10.9%; width: 43.2%; height: 44.4%; clip-path: polygon(0 0, 96% 1%, 100% 87%, 3% 100%); }
+    .screen-phone { top: 21.3%; left: 60.65%; width: 17.1%; height: 50.2%; clip-path: polygon(3% 2%, 89% 0, 100% 95%, 19% 100%); }
+    .scene-label { position: absolute; right: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; border: 1px solid rgba(255, 255, 255, .14); border-radius: 11px; background: rgba(10, 14, 23, .78); color: white; backdrop-filter: blur(12px); font-size: .75rem; font-weight: 750; }
+    .scene-label i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+
+    .proof { padding: 12px 0 72px; }
+    .proof-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--line); }
+    .proof-item { display: flex; align-items: center; gap: 13px; min-height: 77px; padding: 15px 21px; background: white; }
+    .proof-icon { color: var(--cyan); font-size: 1.23rem; font-weight: 800; }
+    .proof-item strong { display: block; font-size: .84rem; }
+    .proof-item span { display: block; color: var(--muted); font-size: .74rem; }
+
+    section { padding-block: 65px; }
+    .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 37px; }
+    .kicker { color: #4665c2; font-size: .75rem; font-weight: 830; letter-spacing: .18em; text-transform: uppercase; }
+    h2 { margin: 10px 0 0; font-size: clamp(2.8rem, 5.4vw, 5.1rem); font-weight: 810; letter-spacing: -.075em; line-height: 1; }
+    .section-heading > p { max-width: 410px; margin: 0 0 5px; color: var(--muted); line-height: 1.76; }
+
+    .projects { display: grid; gap: 23px; }
+    .project { display: grid; grid-template-columns: .83fr 1.17fr; min-height: 490px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 17px 49px rgba(39, 65, 115, .07); }
+    .project:nth-child(even) { grid-template-columns: 1.17fr .83fr; }
+    .project:nth-child(even) .project-copy { order: 2; }
+    .project-copy { display: flex; flex-direction: column; justify-content: center; padding: 41px; }
+    .project-number { margin-bottom: 20px; color: #71819a; font-size: .75rem; font-weight: 740; letter-spacing: .12em; }
+    .project-copy h3 { margin: 10px 0 13px; font-size: clamp(2.15rem, 3.5vw, 3.5rem); letter-spacing: -.075em; line-height: 1.05; }
+    .project-copy > p { max-width: 410px; color: var(--muted); line-height: 1.72; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .tag { padding: 7px 11px; border: 1px solid rgba(48, 80, 137, .09); border-radius: 9px; background: #f1f5fc; color: #435470; font-size: .77rem; }
+    .project-link { align-self: flex-start; margin-top: 24px; color: #385dc6; font-size: .86rem; font-weight: 760; }
+
+    .project-media { position: relative; display: grid; min-width: 0; overflow: hidden; place-items: center; }
+    .media-ro { background: radial-gradient(circle at 73% 34%, rgba(113, 154, 249, .56), transparent 49%), linear-gradient(145deg, #dfebff, #b9d0fa 77%); }
+    .media-almacen { background: radial-gradient(circle at 29% 21%, rgba(133, 211, 210, .56), transparent 49%), linear-gradient(145deg, #e7f5f6, #bddde5 78%); }
+    .media-mariel { background: radial-gradient(circle at 74% 20%, rgba(233, 166, 175, .5), transparent 49%), linear-gradient(145deg, #fff2ec, #f2d5d8 80%); }
+    .media-mr { background: radial-gradient(circle at 35% 26%, rgba(247, 216, 92, .46), transparent 49%), linear-gradient(145deg, #fff7da, #e9dbab 75%); }
+    .browser { position: absolute; top: 20%; left: 7%; width: 83%; overflow: hidden; border: 1px solid rgba(255, 255, 255, .8); border-radius: 13px; background: #edf0f5; box-shadow: 0 24px 59px rgba(35, 59, 105, .22); }
+    .browser-bar { display: flex; align-items: center; gap: 5px; height: 24px; padding-left: 10px; background: #202633; }
+    .browser-bar i { width: 6px; height: 6px; border-radius: 50%; background: #778094; }
+    .browser > img { width: 100%; aspect-ratio: 1.57; object-fit: cover; object-position: center top; }
+    .mobile { position: absolute; right: 7%; bottom: 8%; width: 25%; overflow: hidden; border: 5px solid #141820; border-radius: 21px; background: #141820; box-shadow: 0 17px 46px rgba(29, 48, 85, .32); }
+    .mobile > img { width: 100%; aspect-ratio: 760 / 1548; border-radius: 15px; object-fit: cover; object-position: center top; }
+    .project:nth-child(even) .browser { left: 10%; }
+    .project:nth-child(even) .mobile { right: auto; left: 6%; }
+    .mobile-solo { right: auto; bottom: auto; width: 36%; max-width: 224px; transform: rotate(-4deg); }
+    .mr-badge { position: absolute; top: 19%; right: 13%; padding: 9px 12px; border: 1px solid rgba(163, 128, 21, .18); border-radius: 10px; background: rgba(255, 255, 255, .72); color: #6d5512; font-size: .8rem; font-weight: 760; }
+
+    .capabilities { padding-top: 96px; }
+    .capability-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 32px; }
+    .capability { padding: 24px; border: 1px solid var(--line); border-radius: 19px; background: white; box-shadow: 0 10px 30px rgba(43, 70, 122, .04); }
+    .capability-icon { display: grid; width: 39px; height: 39px; place-items: center; border-radius: 12px; background: rgba(96, 133, 246, .13); color: #4164cc; font-size: 1.05rem; font-weight: 850; }
+    .capability h3 { margin: 18px 0 6px; font-size: 1rem; }
+    .capability p { margin: 0; color: var(--muted); font-size: .88rem; }
+
+    .process { padding-top: 98px; }
+    .process-card { position: relative; overflow: hidden; padding: 57px; border: 1px solid rgba(91, 123, 216, .15); border-radius: 32px; background: radial-gradient(circle at 100% 0%, rgba(117, 149, 240, .2), transparent 49%), #eaf0ff; }
+    .process-card > p { max-width: 660px; margin-top: 15px; color: var(--muted); font-size: 1.01rem; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 35px; }
+    .step { padding: 23px; border: 1px solid rgba(71, 101, 173, .12); border-radius: 18px; background: rgba(255, 255, 255, .8); }
+    .step-number { color: var(--cyan); font-size: .79rem; font-weight: 850; letter-spacing: .1em; }
+    .step h3 { margin: 17px 0 6px; font-size: 1.06rem; }
+    .step p { margin: 0; color: var(--muted); font-size: .87rem; }
+
+    .contact { padding: 97px 0 105px; }
+    .contact-card { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 42px; border: 1px solid rgba(56, 169, 116, .19); border-radius: 25px; background: radial-gradient(circle at 88% 36%, rgba(106, 211, 150, .17), transparent 46%), #f0faf4; }
+    .contact-card h2 { font-size: clamp(2.25rem, 4.2vw, 3.6rem); }
+    .contact-card p { max-width: 560px; color: var(--muted); }
+    .contact-link { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 10px; min-height: 55px; padding: 0 20px; border-radius: 13px; background: #25d366; color: #092111; font-size: .92rem; font-weight: 820; }
+
+    footer { border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 15px; min-height: 77px; color: #65758e; font-size: .85rem; }
+    .footer-inner strong { color: #273a5d; }
+
+    @media (max-width: 1020px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+      .hero-copy { max-width: 720px; }
+      h1 { max-width: 700px; font-size: clamp(4.3rem, 10.5vw, 6.4rem); }
+      .hero-visual { max-width: 790px; }
+      .proof-strip { grid-template-columns: repeat(2, 1fr); }
+      .project, .project:nth-child(even) { grid-template-columns: 1fr; }
+      .project:nth-child(even) .project-copy { order: 0; }
+      .project-copy { padding: 35px; }
+      .project-media { min-height: min(66vw, 540px); }
+      .browser { top: 12%; }
+      .capability-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-card { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 30px, 1240px); }
+      .nav-inner { min-height: 73px; gap: 12px; }
+      .brand { gap: 10px; font-size: 1.45rem; }
+      .brand-mark { width: 42px; height: 42px; border-radius: 13px; }
+      .nav-links { gap: 0; }
+      .nav-links > a:not(.nav-contact) { display: none; }
+      .nav-contact { padding: 9px 12px; font-size: .78rem; }
+      .hero { padding: 62px 0 45px; }
+      .hero-grid { gap: 27px; }
+      .eyebrow { font-size: .69rem; letter-spacing: .095em; }
+      h1 { margin: 18px 0; font-size: clamp(3.65rem, 14vw, 5.1rem); }
+      .lead { font-size: 1rem; }
+      .actions { gap: 9px; }
+      .button { min-height: 48px; padding: 0 14px; font-size: .82rem; }
+      .scene { border-radius: 16px; }
+      .scene-label { right: 8px; bottom: 8px; gap: 6px; padding: 7px 9px; font-size: .61rem; }
+      .proof { padding-bottom: 50px; }
+      .proof-item { min-height: 75px; gap: 8px; padding: 12px; }
+      .proof-icon { font-size: 1rem; }
+      .proof-item strong { font-size: .72rem; }
+      .proof-item span { font-size: .66rem; }
+      section { padding-block: 48px; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 14px; margin-bottom: 25px; }
+      h2 { font-size: clamp(2.6rem, 11vw, 3.7rem); }
+      .project { min-height: 0; border-radius: 22px; }
+      .project-copy { padding: 27px 22px; }
+      .project-copy h3 { font-size: 2.35rem; }
+      .project-media { min-height: 72vw; max-height: 415px; }
+      .browser { top: 13%; border-radius: 8px; }
+      .browser-bar { height: 16px; padding-left: 7px; }
+      .browser-bar i { width: 4px; height: 4px; }
+      .mobile { width: 25%; border-width: 3px; border-radius: 13px; }
+      .mobile > img { border-radius: 9px; }
+      .mobile-solo { width: 37%; }
+      .mr-badge { right: 7%; padding: 7px 9px; font-size: .67rem; }
+      .capabilities, .process { padding-top: 69px; }
+      .capability-grid { gap: 10px; }
+      .capability { min-width: 0; padding: 17px 13px; }
+      .capability h3 { font-size: .88rem; }
+      .capability p { font-size: .79rem; }
+      .process-card { padding: 30px 21px; border-radius: 23px; }
+      .steps { grid-template-columns: 1fr; margin-top: 25px; }
+      .step { padding: 19px; }
+      .contact { padding: 75px 0 80px; }
+      .contact-card { gap: 14px; padding: 27px 21px; border-radius: 21px; }
+      .contact-link { width: 100%; }
+      .footer-inner { min-height: 91px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 4px; font-size: .8rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
-<header class="nav"><div class="wrap nav-in"><a class="brand" href="#inicio"><span class="mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M7 10.5h26v7H23.5V31h-7V17.5H7v-7Z" fill="white"/><rect x="27" y="24" width="6" height="7" rx="3" fill="#AFC2FF"/></svg></span><span>Taten<b>Soft</b></span></a><nav class="navlinks"><a href="#proyectos">Proyectos</a><a href="#como-trabajo">Cómo trabajo</a><a class="navcta" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20consultarte%20por%20un%20software%20para%20mi%20negocio." target="_blank" rel="noopener">Hablemos</a></nav></div></header>
-<main id="inicio">
-<section class="hero"><div class="wrap hero-grid"><div><span class="eyebrow">Desarrollo independiente</span><h1>Software simple para <span class="accent">negocios reales.</span></h1><p class="lead">Herramientas web hechas a medida para pequeños comercios y emprendimientos. Sin sistemas gigantes: solo lo que necesitás para trabajar mejor.</p><div class="actions"><a class="btn primary" href="#proyectos">Ver proyectos</a><a class="btn" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20consultarte%20por%20un%20software%20para%20mi%20negocio." target="_blank" rel="noopener">Contame qué necesitás</a></div><p class="micro">Ventas · stock · pedidos · clientes · cuentas corrientes · catálogos web</p></div><div class="hero-visual" aria-label="Muestra de proyectos TatenSoft"><div class="glow"></div><div class="phone main"><img data-b64="assets/ro-home.b64" alt="RO Rodamientos"></div><div class="phone small"><img data-b64="assets/pedidosfacil-inicio.b64" alt="PedidosFácil"></div></div></div></section>
-<section id="proyectos"><div class="wrap"><div class="section-head"><div><span class="kicker">Trabajo real</span><h2>Proyectos que ya funcionan.</h2></div><p>Sistemas y sitios nacidos de problemas concretos. La idea es mostrar lo que resuelve cada uno, no llenar la página de funciones.</p></div><div class="projects">
-<article class="project"><div class="copy"><span class="kicker">Catálogo técnico & comercial</span><h3>RO Rodamientos</h3><p>Catálogo online de repuestos con búsquedas por artículos y equivalencias, catálogo técnico de retenes, precios, clientes y armado de pedidos.</p><div class="tags"><span class="tag">Búsqueda técnica</span><span class="tag">Precios</span><span class="tag">Pedidos</span><span class="tag">Catálogos</span></div></div><div class="media ro"><div class="device"><img data-b64="assets/ro-home.b64" alt="Inicio de RO Rodamientos"></div><div class="device secondary"><img data-b64="assets/ro-retenes.b64" alt="Catálogo de retenes de RO Rodamientos"></div></div></article>
-<article class="project"><div class="copy"><span class="kicker">Gestión de comercio</span><h3>WebAlmacén</h3><p>Ventas, productos, stock, combos, clientes y proveedores en una interfaz pensada para un comercio chico. También suma una vidriera web para productos y ofertas.</p><div class="tags"><span class="tag">Ventas</span><span class="tag">Stock</span><span class="tag">Proveedores</span><span class="tag">Web pública</span></div></div><div class="media almacen"><div class="device"><img data-b64="assets/webalmacen-publica.b64" alt="Web pública de WebAlmacén"></div></div></article>
-<article class="project"><div class="copy"><span class="kicker">Pedidos & seguimiento</span><h3>PedidosFácil</h3><p>Gestión de pedidos, compras pendientes, preparación, cobros y estadísticas. Pensado para trabajar rápido desde el celular sin perder el control del negocio.</p><div class="tags"><span class="tag">Pedidos</span><span class="tag">Compras</span><span class="tag">Cobros</span><span class="tag">Estadísticas</span></div></div><div class="media mariel"><div class="device"><img data-b64="assets/pedidosfacil-inicio.b64" alt="Panel de PedidosFácil"></div></div></article>
-<article class="project"><div class="copy"><span class="kicker">Sitio comercial</span><h3>MR Letreros</h3><p>Página web responsive para presentar servicios, trabajos realizados, proceso de trabajo y facilitar el contacto directo con clientes.</p><div class="tags"><span class="tag">Web responsive</span><span class="tag">Portfolio</span><span class="tag">Servicios</span><span class="tag">Contacto</span></div></div><div class="media mr"><div class="device"><img data-b64="assets/mr-letreros.b64" alt="Sitio web de MR Letreros"></div></div></article>
-</div><div class="dev-note"><div>↗</div><div><strong>Web Vanina · en desarrollo</strong><span>Sistema de productos, pedidos, mercadería, clientes y cuenta corriente. Lo sumamos al portfolio cuando tenga capturas finales.</span></div></div></div></section>
-<section id="como-trabajo"><div class="wrap"><div class="approach"><span class="kicker" style="color:#afc2ff">Sin vueltas</span><h2>El sistema se adapta al negocio, no al revés.</h2><p>La idea no es vender un programa enorme. Primero entendemos cómo trabajás y después construimos solo lo que realmente te sirve.</p><div class="steps"><div class="step"><span class="num">1</span><h4>Me contás cómo trabajás</h4><p>Qué hacés hoy, dónde perdés tiempo y qué querés ordenar.</p></div><div class="step"><span class="num">2</span><h4>Definimos lo necesario</h4><p>Priorizamos las funciones que resuelven el problema sin inflar el proyecto.</p></div><div class="step"><span class="num">3</span><h4>Lo probamos y ajustamos</h4><p>El software se mejora con uso real, no con una lista infinita de promesas.</p></div></div></div></div></section>
-<section class="contact" id="contacto"><div class="wrap"><div class="contact-card"><span class="kicker">TatenSoft</span><h2>¿Hay algo de tu negocio que todavía resolvés a mano?</h2><p>Contame cómo lo hacés hoy y vemos si vale la pena simplificarlo con una herramienta hecha para vos.</p><a class="btn primary" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20consultarte%20por%20un%20software%20para%20mi%20negocio." target="_blank" rel="noopener">Escribime por WhatsApp</a></div></div></section>
-</main>
-<footer><div class="wrap foot"><span>© 2026 TatenSoft</span><span>Software simple · Problemas reales</span></div></footer>
-<script>
-(async()=>{const imgs=[...document.querySelectorAll('img[data-b64]')];const cache={};await Promise.all(imgs.map(async img=>{const p=img.dataset.b64;try{if(!cache[p]) cache[p]=fetch(p,{cache:'no-store'}).then(r=>{if(!r.ok) throw new Error(r.status);return r.text()});const b64=(await cache[p]).trim();img.src='data:image/webp;base64,'+b64}catch(e){img.alt='Captura no disponible';}}));})();
-</script>
-</body></html>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#inicio" aria-label="TatenSoft, inicio">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M7 10.5h26v7H23.5V31h-7V17.5H7v-7Z" fill="white"/><rect x="27" y="24" width="6" height="7" rx="3" fill="#B8D8FF"/></svg></span>
+        <span>Taten<strong>Soft</strong></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#soluciones">Soluciones</a>
+        <a class="nav-contact" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20consultarte%20por%20un%20software%20para%20mi%20negocio." target="_blank" rel="noopener">Hablemos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Software a medida · Santa Fe</span>
+          <h1>Tu negocio,<br><span class="gradient-text">mejor.</span></h1>
+          <p class="lead">Sistemas web, páginas y herramientas pensadas para tu forma de trabajar. Claras, ágiles y listas para usar desde la compu o el celular.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#proyectos">Conocé mis proyectos <span aria-hidden="true">↗</span></a>
+            <a class="button button-whatsapp" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20consultarte%20por%20un%20software%20para%20mi%20negocio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.45A11.8 11.8 0 0 0 .34 11.8c0 2.08.54 4.1 1.57 5.88L.24 23.76l6.25-1.64a11.8 11.8 0 0 0 5.64 1.44h.01A11.8 11.8 0 0 0 20.5 3.45Zm-8.36 18.12h-.01a9.77 9.77 0 0 1-4.98-1.37l-.36-.22-3.71.97.99-3.61-.24-.37a9.77 9.77 0 1 1 8.31 4.6Zm5.36-7.32c-.29-.15-1.74-.86-2.01-.96-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.19-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.09-.19.04-.37-.03-.51-.07-.15-.66-1.59-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.52.07-.79.36-.27.29-1.03 1.01-1.03 2.46 0 1.44 1.05 2.84 1.2 3.04.15.19 2.06 3.14 5 4.41.7.3 1.25.48 1.67.61.7.22 1.33.19 1.83.12.56-.08 1.74-.71 1.98-1.4.25-.69.25-1.27.17-1.39-.07-.12-.26-.19-.55-.33Z"/></svg>WhatsApp</a>
+          </div>
+          <p class="micro">Ventas · Stock · Pedidos · Clientes · Catálogos</p>
+        </div>
+
+        <div class="hero-visual" aria-label="Software de TatenSoft funcionando en computadora y celular">
+          <div class="scene">
+            <img class="scene-background" src="assets/escena-dispositivos.webp" width="1536" height="1024" alt="Una notebook y un teléfono sostenido en la mano">
+            <div class="screen screen-laptop"><img src="assets/almacen-escritorio.webp" width="1365" height="855" alt="Panel de ventas y estadísticas de WebAlmacén"></div>
+            <div class="screen screen-phone"><img src="assets/almacen-celular.webp" width="760" height="1548" alt="WebAlmacén abierto desde el celular"></div>
+            <span class="scene-label"><i aria-hidden="true"></i> Mismo negocio. Cualquier pantalla.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="proof" aria-label="Características principales">
+      <div class="wrap proof-strip">
+        <div class="proof-item"><b class="proof-icon" aria-hidden="true">↗</b><div><strong>Proyectos reales</strong><span>En uso todos los días</span></div></div>
+        <div class="proof-item"><b class="proof-icon" aria-hidden="true">▣</b><div><strong>Compu y celular</strong><span>Todo se adapta</span></div></div>
+        <div class="proof-item"><b class="proof-icon" aria-hidden="true">✦</b><div><strong>Hecho a medida</strong><span>Para tu negocio</span></div></div>
+        <div class="proof-item"><b class="proof-icon" aria-hidden="true">◉</b><div><strong>Trato directo</strong><span>Sin intermediarios</span></div></div>
+      </div>
+    </div>
+
+    <section id="proyectos">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="kicker">Portfolio · trabajos reales</span><h2>Hechos para<br>funcionar.</h2></div>
+          <p>No son maquetas ni ideas pendientes. Son herramientas creadas para comercios y emprendimientos que las usan de verdad.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <div class="project-copy">
+              <span class="project-number">01 / CATÁLOGO TÉCNICO</span>
+              <span class="kicker">Automotor · agro · industria</span>
+              <h3>RO Rodamientos</h3>
+              <p>Un catálogo técnico y comercial con búsquedas por códigos, aplicaciones y equivalencias. Precios, clientes y pedidos en una sola herramienta.</p>
+              <div class="tags"><span class="tag">+40.000 productos</span><span class="tag">Equivalencias</span><span class="tag">Pedidos</span><span class="tag">Catálogo técnico</span></div>
+              <a class="project-link" href="https://rorodamientos.com.ar/" target="_blank" rel="noopener">Visitar proyecto ↗</a>
+            </div>
+            <div class="project-media media-ro" aria-label="RO Rodamientos en computadora y celular">
+              <div class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/ro-escritorio.webp" width="1264" height="753" loading="lazy" alt="Sitio de RO Rodamientos en una computadora"></div>
+              <div class="mobile"><img src="assets/ro-celular.webp" width="760" height="1548" loading="lazy" alt="Sitio de RO Rodamientos en un celular"></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-copy">
+              <span class="project-number">02 / GESTIÓN COMERCIAL</span>
+              <span class="kicker">Almacén · fiambrería · comercio</span>
+              <h3>WebAlmacén</h3>
+              <p>Ventas, stock, productos, combos, clientes y proveedores. Sumale una vidriera web para mostrar ofertas y recibir pedidos por WhatsApp.</p>
+              <div class="tags"><span class="tag">Ventas rápidas</span><span class="tag">Stock</span><span class="tag">Combos</span><span class="tag">Tienda online</span></div>
+            </div>
+            <div class="project-media media-almacen" aria-label="WebAlmacén en computadora y celular">
+              <div class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/almacen-tienda.webp" width="1328" height="831" loading="lazy" alt="Tienda de WebAlmacén en una computadora"></div>
+              <div class="mobile"><img src="assets/almacen-ventas.webp" width="760" height="1548" loading="lazy" alt="Nueva venta de WebAlmacén desde un celular"></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-copy">
+              <span class="project-number">03 / PEDIDOS Y SEGUIMIENTO</span>
+              <span class="kicker">Emprendimientos · ventas</span>
+              <h3>PedidosFácil</h3>
+              <p>Pedidos, compras, preparación, cobros y estadísticas. Una forma clara de seguir cada venta sin depender de papeles, chats o planillas.</p>
+              <div class="tags"><span class="tag">Pedidos</span><span class="tag">Cobros</span><span class="tag">Compras</span><span class="tag">Estadísticas</span></div>
+              <a class="project-link" href="https://listoparallevar.com.ar/" target="_blank" rel="noopener">Visitar proyecto ↗</a>
+            </div>
+            <div class="project-media media-mariel" aria-label="PedidosFácil en computadora y celular">
+              <div class="browser"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/mariel-escritorio.webp" width="1250" height="840" loading="lazy" alt="Vidriera de El Almacén de Mariel en una computadora"></div>
+              <div class="mobile"><img src="assets/mariel-estadisticas.webp" width="760" height="1548" loading="lazy" alt="Estadísticas de PedidosFácil desde un celular"></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-copy">
+              <span class="project-number">04 / PRESENCIA DIGITAL</span>
+              <span class="kicker">Sitio comercial · portfolio</span>
+              <h3>MR Letreros</h3>
+              <p>Una web con identidad propia para mostrar servicios, trabajos realizados y transformar visitas en consultas reales.</p>
+              <div class="tags"><span class="tag">Diseño responsive</span><span class="tag">Portfolio</span><span class="tag">Servicios</span><span class="tag">Contacto</span></div>
+            </div>
+            <div class="project-media media-mr" aria-label="MR Letreros abierto en un celular">
+              <span class="mr-badge">Diseño + identidad</span>
+              <div class="mobile mobile-solo"><img src="assets/mr-letreros-celular.webp" width="760" height="1548" loading="lazy" alt="Página de MR Letreros en un celular"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="capabilities" id="soluciones">
+      <div class="wrap">
+        <div class="section-heading"><div><span class="kicker">Qué puede resolver</span><h2>Menos vueltas.<br>Más control.</h2></div><p>Cada negocio tiene su propia lógica. El sistema tiene que acompañarla, no obligarte a cambiar cómo trabajás.</p></div>
+        <div class="capability-grid">
+          <article class="capability"><span class="capability-icon" aria-hidden="true">$</span><h3>Ventas y cobros</h3><p>Registrá operaciones y seguí lo que entra.</p></article>
+          <article class="capability"><span class="capability-icon" aria-hidden="true">▦</span><h3>Stock y productos</h3><p>Sabé qué tenés, qué falta y cuánto vale.</p></article>
+          <article class="capability"><span class="capability-icon" aria-hidden="true">↗</span><h3>Reportes y estadísticas</h3><p>Entendé tu negocio con datos claros.</p></article>
+          <article class="capability"><span class="capability-icon" aria-hidden="true">◉</span><h3>Clientes y proveedores</h3><p>Cuentas corrientes, movimientos e historial.</p></article>
+          <article class="capability"><span class="capability-icon" aria-hidden="true">▣</span><h3>Páginas y catálogos</h3><p>Mostrá lo que hacés y recibí consultas.</p></article>
+          <article class="capability"><span class="capability-icon" aria-hidden="true">✓</span><h3>Pedidos y seguimiento</h3><p>Ordená cada paso hasta la entrega.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="como-trabajo">
+      <div class="wrap process-card">
+        <span class="kicker">Simple, de principio a fin</span>
+        <h2>Primero tu negocio.<br>Después, el sistema.</h2>
+        <p>Sin paquetes gigantes ni funciones que nunca vas a tocar. Lo importante es construir algo que realmente te sirva todos los días.</p>
+        <div class="steps">
+          <article class="step"><span class="step-number">PASO 01</span><h3>Me contás cómo trabajás</h3><p>Vemos qué hacés hoy y dónde se te va el tiempo.</p></article>
+          <article class="step"><span class="step-number">PASO 02</span><h3>Armamos una solución</h3><p>Definimos lo que necesitás, sin inflar el proyecto.</p></article>
+          <article class="step"><span class="step-number">PASO 03</span><h3>Lo probamos en serio</h3><p>Ajustamos con situaciones reales de tu negocio.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="wrap contact-card">
+        <div><span class="kicker">¿Lo charlamos?</span><h2>Tu idea puede<br>funcionar mejor.</h2><p>Contame qué necesitás y vemos juntos cómo simplificar el trabajo de tu negocio.</p></div>
+        <a class="contact-link" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20consultarte%20por%20un%20software%20para%20mi%20negocio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.45A11.8 11.8 0 0 0 .34 11.8c0 2.08.54 4.1 1.57 5.88L.24 23.76l6.25-1.64a11.8 11.8 0 0 0 5.64 1.44h.01A11.8 11.8 0 0 0 20.5 3.45Zm-8.36 18.12h-.01a9.77 9.77 0 0 1-4.98-1.37l-.36-.22-3.71.97.99-3.61-.24-.37a9.77 9.77 0 1 1 8.31 4.6Zm5.36-7.32c-.29-.15-1.74-.86-2.01-.96-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.19-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.09-.19.04-.37-.03-.51-.07-.15-.66-1.59-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.52.07-.79.36-.27.29-1.03 1.01-1.03 2.46 0 1.44 1.05 2.84 1.2 3.04.15.19 2.06 3.14 5 4.41.7.3 1.25.48 1.67.61.7.22 1.33.19 1.83.12.56-.08 1.74-.71 1.98-1.4.25-.69.25-1.27.17-1.39-.07-.12-.26-.19-.55-.33Z"/></svg>Escribime por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span><strong>TatenSoft</strong> · Desarrollo de software en Santa Fe</span><span>© 2026 · Hecho para negocios reales.</span></div>
+  </footer>
+</body>
+</html>
