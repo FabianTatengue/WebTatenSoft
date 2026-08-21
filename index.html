@@ -107,6 +107,37 @@
     .footer-inner { display: flex; min-height: 71px; align-items: center; justify-content: space-between; gap: 13px; color: #4c5c74; font-size: .81rem; }
     .footer-inner strong { color: #213550; }
 
+    @media (hover: hover) and (pointer: fine) {
+      .brand-icon, .button, .navigation-contact, .contact-button, .highlight, .highlight-icon, .project, .project-artwork img, .hero-artwork, .hero-artwork img, .solution, .solution-icon, .step, .tag, .project-link { transition: transform .32s cubic-bezier(.22, 1, .36, 1), box-shadow .32s ease, border-color .28s ease, background-color .28s ease, color .28s ease; }
+      .brand:hover .brand-icon { transform: translateY(-2px) rotate(-5deg); }
+      .navigation > a:not(.navigation-contact) { position: relative; }
+      .navigation > a:not(.navigation-contact)::after { position: absolute; right: 0; bottom: -6px; left: 0; height: 2px; border-radius: 2px; background: var(--blue); content: ""; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+      .navigation > a:not(.navigation-contact):hover::after { transform: scaleX(1); }
+      .navigation-contact:hover, .button:hover, .contact-button:hover { transform: translateY(-3px); }
+      .button-primary:hover { box-shadow: 0 16px 29px rgba(48, 82, 171, .33); }
+      .button-primary span { display: inline-block; transition: transform .25s ease; }
+      .button-primary:hover span { transform: translate(3px, -2px); }
+      .button-whatsapp:hover { box-shadow: 0 11px 23px rgba(32, 115, 73, .15); }
+      .contact-button:hover { box-shadow: 0 13px 27px rgba(31, 140, 72, .24); }
+      .hero-artwork:hover { transform: translateY(-4px); }
+      .hero-artwork:hover img { transform: scale(1.018); }
+      .highlight:hover { background: rgba(48, 82, 171, .055); }
+      .highlight:hover .highlight-icon { transform: translateY(-2px) scale(1.13); }
+      .project:hover { z-index: 1; transform: translateY(-5px); box-shadow: 0 25px 53px rgba(34, 53, 89, .2); }
+      .project:hover .project-artwork img { transform: scale(1.025); }
+      .project-link:hover { color: #183c95; transform: translateX(4px); }
+      .tag:hover { border-color: #849bc4; transform: translateY(-2px); }
+      .solution:hover { border-color: #819bc9; transform: translateY(-5px); box-shadow: 0 17px 35px rgba(40, 59, 93, .17); }
+      .solution:hover .solution-icon { transform: rotate(-7deg) scale(1.09); }
+      .step:hover { border-color: #829dca; transform: translateY(-4px); box-shadow: 0 15px 28px rgba(48, 68, 105, .16); }
+      .motion-ready .reveal { opacity: 0; transform: translateY(22px); transition: opacity .58s ease, transform .58s cubic-bezier(.22, 1, .36, 1); transition-delay: var(--reveal-delay, 0ms); }
+      .motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
+      .motion-ready .project.reveal.is-visible:hover { transform: translateY(-5px); }
+      .motion-ready .solution.reveal.is-visible:hover { transform: translateY(-5px); }
+      .motion-ready .step.reveal.is-visible:hover { transform: translateY(-4px); }
+      .motion-ready .hero-artwork.reveal.is-visible:hover { transform: translateY(-4px); }
+    }
+
     @media (min-width: 1021px) {
       :root {
         --background: #d7e1f0;
@@ -185,7 +216,10 @@
       .footer-inner { min-height: 84px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 3px; font-size: .76rem; }
     }
 
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
   </style>
 </head>
 <body>
@@ -225,5 +259,30 @@
   </main>
 
   <footer><div class="container footer-inner"><span><strong>TatenSoft</strong> · Software desarrollado en Santa Fe</span><span>© 2026 · Hecho para negocios reales.</span></div></footer>
+  <script>
+    (() => {
+      const canAnimate = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!canAnimate || reduceMotion || !("IntersectionObserver" in window)) return;
+
+      const elements = document.querySelectorAll(".hero-copy, .hero-artwork, .highlights, .heading, .project, .solution, .method-box, .step, .contact-box");
+      document.documentElement.classList.add("motion-ready");
+
+      const observer = new IntersectionObserver(entries => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      }, { threshold: .12, rootMargin: "0px 0px -35px 0px" });
+
+      for (const element of elements) {
+        const siblings = element.matches(".solution, .step") ? [...element.parentElement.children].indexOf(element) : 0;
+        element.style.setProperty("--reveal-delay", `${Math.min(siblings % 3 * 65, 130)}ms`);
+        element.classList.add("reveal");
+        observer.observe(element);
+      }
+    })();
+  </script>
 </body>
 </html>
