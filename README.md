@@ -18,9 +18,17 @@ Primer bosquejo visual en desarrollo.
 - MR Letreros
 - Web Vanina
 
+## Identidad visual
+
+Se agregó `logos.html` con tres conceptos iniciales para la marca. La opción A (Bloque T) es la dirección recomendada por ahora.
+
+## Capturas
+
+Las capturas móviles ya sirven para definir el criterio visual. Más adelante conviene reemplazar las principales por capturas limpias de escritorio para el portfolio final.
+
 ## Vista local
 
-Abrir `index.html` directamente en el navegador.
+Abrir `index.html` directamente en el navegador. Para comparar los logos, abrir `logos.html`.
 
 ## GitHub Pages
 
