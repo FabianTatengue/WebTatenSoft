@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Instalación limpia de Windows en PC y notebook</title>
+  <desc id="desc">Ilustración tecnológica clara con una computadora de escritorio y una notebook mostrando pantallas inspiradas en Windows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset=".52" stop-color="#edf4ff"/>
+      <stop offset="1" stop-color="#dbe8fb"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a47"/>
+      <stop offset=".48" stop-color="#0a3fae"/>
+      <stop offset="1" stop-color="#0879ea"/>
+    </linearGradient>
+    <linearGradient id="tower" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#202b3e"/>
+      <stop offset="1" stop-color="#0b1120"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eff3f9"/>
+      <stop offset=".5" stop-color="#aeb9c9"/>
+      <stop offset="1" stop-color="#758397"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#5aa8ff" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#5aa8ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#29476f" flood-opacity=".2"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" rx="32" fill="url(#bg)"/>
+  <circle cx="1030" cy="120" r="170" fill="#cfe0fb" opacity=".45"/>
+  <circle cx="970" cy="170" r="96" fill="#fff" opacity=".58"/>
+  <path d="M0 596C211 540 358 657 548 609c171-43 266-160 472-120 77 15 133 48 180 83v188H0Z" fill="#d4e3f7" opacity=".65"/>
+  <g opacity=".33" fill="#6d8bb8">
+    <circle cx="86" cy="94" r="5"/><circle cx="118" cy="94" r="5"/><circle cx="150" cy="94" r="5"/>
+    <circle cx="86" cy="126" r="5"/><circle cx="118" cy="126" r="5"/><circle cx="150" cy="126" r="5"/>
+    <circle cx="86" cy="158" r="5"/><circle cx="118" cy="158" r="5"/><circle cx="150" cy="158" r="5"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <!-- desktop tower -->
+    <g transform="translate(927 223)">
+      <rect width="176" height="360" rx="22" fill="url(#tower)" stroke="#24344e" stroke-width="4"/>
+      <rect x="18" y="23" width="140" height="296" rx="16" fill="#0a1324" stroke="#354966" stroke-width="3"/>
+      <circle cx="88" cy="91" r="42" fill="url(#glow)"/>
+      <circle cx="88" cy="91" r="28" fill="none" stroke="#3e9cff" stroke-width="6" opacity=".88"/>
+      <circle cx="88" cy="174" r="42" fill="url(#glow)"/>
+      <circle cx="88" cy="174" r="28" fill="none" stroke="#3e9cff" stroke-width="6" opacity=".82"/>
+      <circle cx="88" cy="257" r="42" fill="url(#glow)"/>
+      <circle cx="88" cy="257" r="28" fill="none" stroke="#3e9cff" stroke-width="6" opacity=".76"/>
+      <rect x="27" y="332" width="62" height="5" rx="2.5" fill="#3b77df"/>
+      <circle cx="139" cy="334" r="4" fill="#5ea6ff"/>
+    </g>
+
+    <!-- desktop monitor -->
+    <g transform="translate(500 133)">
+      <rect width="484" height="342" rx="23" fill="#111827" stroke="#2b3546" stroke-width="5"/>
+      <rect x="17" y="17" width="450" height="307" rx="13" fill="url(#screen)"/>
+      <path d="M20 271C129 212 185 256 265 178c71-69 103-59 201-135v281H17V279Z" fill="#18a0fb" opacity=".26"/>
+      <path d="M18 313c103-124 170-104 235-177 76-86 143-100 214-94v282H17Z" fill="#79c6ff" opacity=".13"/>
+      <g transform="translate(181 107)" fill="#fff" opacity=".95">
+        <rect x="0" y="0" width="52" height="52" rx="3"/>
+        <rect x="59" y="0" width="52" height="52" rx="3"/>
+        <rect x="0" y="59" width="52" height="52" rx="3"/>
+        <rect x="59" y="59" width="52" height="52" rx="3"/>
+      </g>
+      <rect x="223" y="342" width="38" height="67" rx="9" fill="#2a3547"/>
+      <path d="M165 421h155c19 0 35 9 45 25H120c10-16 26-25 45-25Z" fill="#344155"/>
+      <ellipse cx="243" cy="456" rx="168" ry="19" fill="#8296b5" opacity=".23"/>
+    </g>
+
+    <!-- notebook -->
+    <g transform="translate(116 294) rotate(-2 210 150)">
+      <rect x="40" y="0" width="361" height="247" rx="18" fill="#1a2332" stroke="#39485d" stroke-width="5"/>
+      <rect x="55" y="15" width="331" height="213" rx="10" fill="url(#screen)"/>
+      <path d="M55 186c85-79 149-34 198-102 43-60 83-58 133-42v186H55Z" fill="#26a7ff" opacity=".26"/>
+      <g transform="translate(166 68)" fill="#fff" opacity=".94">
+        <rect width="38" height="38" rx="2"/>
+        <rect x="44" width="38" height="38" rx="2"/>
+        <rect y="44" width="38" height="38" rx="2"/>
+        <rect x="44" y="44" width="38" height="38" rx="2"/>
+      </g>
+      <path d="M17 247h408l46 67c7 10 0 24-13 24H4c-13 0-20-14-13-24Z" fill="url(#metal)" stroke="#7b8899" stroke-width="3"/>
+      <rect x="162" y="264" width="120" height="10" rx="5" fill="#7a8798" opacity=".7"/>
+      <path d="M-4 322h466" stroke="#566476" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- floating status card -->
+  <g transform="translate(88 215)" filter="url(#shadow)">
+    <rect width="268" height="98" rx="22" fill="#fff" stroke="#c2d3ec" stroke-width="2"/>
+    <circle cx="48" cy="49" r="26" fill="#e0ebff"/>
+    <path d="m36 50 8 8 17-19" fill="none" stroke="#2e63c7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="86" y="41" font-family="Inter,Segoe UI,sans-serif" font-size="16" font-weight="700" fill="#1d3353">Instalación limpia</text>
+    <text x="86" y="66" font-family="Inter,Segoe UI,sans-serif" font-size="14" fill="#536a89">PC y notebook</text>
+  </g>
+</svg>
