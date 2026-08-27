@@ -54,6 +54,10 @@
           },
           "areaServed": [
             { "@type": "City", "name": "Santa Fe" },
+            { "@type": "State", "name": "Santa Fe" },
+            { "@type": "City", "name": "Santo Tomé" },
+            { "@type": "City", "name": "Recreo" },
+            { "@type": "City", "name": "Esperanza" },
             { "@type": "Country", "name": "Argentina" }
           ],
           "contactPoint": {
@@ -66,11 +70,11 @@
             "@type": "OfferCatalog",
             "name": "Desarrollo web, software y soporte técnico",
             "itemListElement": [
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo de páginas web en Santa Fe" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software de gestión a medida para comercios" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas de ventas, stock y pedidos" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Catálogos digitales y tiendas online" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalación limpia de Windows para PC y notebooks" } }
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo de páginas web en Santa Fe", "url": "https://fabiantatengue.github.io/WebTatenSoft/paginas-web-santa-fe/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Software de gestión a medida para comercios", "url": "https://fabiantatengue.github.io/WebTatenSoft/software-para-comercios-santa-fe/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas de ventas y stock", "url": "https://fabiantatengue.github.io/WebTatenSoft/sistema-ventas-stock-santa-fe/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo de software a medida", "url": "https://fabiantatengue.github.io/WebTatenSoft/software-a-medida-santa-fe/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalación limpia de Windows para PC y notebooks", "url": "https://fabiantatengue.github.io/WebTatenSoft/instalacion-windows-santa-fe/" } }
             ]
           }
         },
@@ -180,7 +184,7 @@
 
     .solutions { padding-top: 88px; }
     .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 29px; }
-    .solution { padding: 21px; border: 1px solid var(--line); border-radius: 17px; background: white; box-shadow: 0 9px 23px rgba(45, 68, 107, .075); }
+    .solution { display: block; padding: 21px; border: 1px solid var(--line); border-radius: 17px; background: white; color: inherit; box-shadow: 0 9px 23px rgba(45, 68, 107, .075); }
     .solution-icon { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 11px; background: #dfe9ff; color: #3153ad; font-size: 1rem; font-weight: 770; }
     .solution h3 { margin: 15px 0 4px; font-size: .96rem; font-weight: 710; }
     .solution p { margin: 0; color: var(--muted); font-size: .84rem; }
@@ -344,7 +348,7 @@
   <main id="inicio">
     <section class="hero">
       <div class="container hero-grid">
-        <div class="hero-copy"><span class="eyebrow">Desarrollo a medida · Santa Fe</span><h1>Software para <span>negocios reales.</span></h1><p class="intro">Páginas web y sistemas a medida en Santa Fe, pensados para tu forma de trabajar. Desde la computadora o el celular, sin complicaciones.</p><div class="buttons"><a class="button button-primary" href="#proyectos">Ver trabajos realizados <span aria-hidden="true">↗</span></a><a class="button button-whatsapp" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.45A11.8 11.8 0 0 0 .34 11.8c0 2.08.54 4.1 1.57 5.88L.24 23.76l6.25-1.64a11.8 11.8 0 0 0 5.64 1.44h.01A11.8 11.8 0 0 0 20.5 3.45Zm-8.36 18.12h-.01a9.77 9.77 0 0 1-4.98-1.37l-.36-.22-3.71.97.99-3.61-.24-.37a9.77 9.77 0 1 1 8.31 4.6Zm5.36-7.32c-.29-.15-1.74-.86-2.01-.96-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.19-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.09-.19.04-.37-.03-.51-.07-.15-.66-1.59-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.52.07-.79.36-.27.29-1.03 1.01-1.03 2.46 0 1.44 1.05 2.84 1.2 3.04.15.19 2.06 3.14 5 4.41.7.3 1.25.48 1.67.61.7.22 1.33.19 1.83.12.56-.08 1.74-.71 1.98-1.4.25-.69.25-1.27.17-1.39-.07-.12-.26-.19-.55-.33Z"/></svg>WhatsApp</a></div><p class="hero-caption">Ventas · Stock · Pedidos · Clientes · Catálogos</p></div>
+        <div class="hero-copy"><span class="eyebrow">Desarrollo a medida · Santa Fe</span><h1>Software para <span>negocios reales.</span></h1><p class="intro">Páginas web y sistemas a medida desde Santa Fe, para comercios de la ciudad, alrededores y toda la provincia. Desde la computadora o el celular, sin complicaciones.</p><div class="buttons"><a class="button button-primary" href="#proyectos">Ver trabajos realizados <span aria-hidden="true">↗</span></a><a class="button button-whatsapp" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.45A11.8 11.8 0 0 0 .34 11.8c0 2.08.54 4.1 1.57 5.88L.24 23.76l6.25-1.64a11.8 11.8 0 0 0 5.64 1.44h.01A11.8 11.8 0 0 0 20.5 3.45Zm-8.36 18.12h-.01a9.77 9.77 0 0 1-4.98-1.37l-.36-.22-3.71.97.99-3.61-.24-.37a9.77 9.77 0 1 1 8.31 4.6Zm5.36-7.32c-.29-.15-1.74-.86-2.01-.96-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.19-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.09-.19.04-.37-.03-.51-.07-.15-.66-1.59-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.52.07-.79.36-.27.29-1.03 1.01-1.03 2.46 0 1.44 1.05 2.84 1.2 3.04.15.19 2.06 3.14 5 4.41.7.3 1.25.48 1.67.61.7.22 1.33.19 1.83.12.56-.08 1.74-.71 1.98-1.4.25-.69.25-1.27.17-1.39-.07-.12-.26-.19-.55-.33Z"/></svg>WhatsApp</a></div><p class="hero-caption">Ventas · Stock · Pedidos · Clientes · Catálogos</p></div>
         <div class="hero-artwork"><img src="assets/presentacion-principal.webp" width="1360" height="900" fetchpriority="high" decoding="async" alt="Sistema WebAlmacén en computadora y celular, con ambas pantallas completas"></div>
       </div>
     </section>
@@ -375,20 +379,20 @@
             <span class="windows-point"><b>✓</b>Configuración y optimización</span>
           </div>
           <div class="buttons"><a class="button button-whatsapp" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20consultar%20por%20una%20instalaci%C3%B3n%20limpia%20de%20Windows." target="_blank" rel="noopener">Consultar por WhatsApp</a></div>
-          <p class="windows-note"><strong>Instalación limpia y a precio justo.</strong> Consultá también por respaldo de tus archivos antes de formatear.</p>
+          <p class="windows-note"><strong>Instalación limpia y a precio justo.</strong> Consultá también por respaldo de tus archivos antes de formatear. <a href="instalacion-windows-santa-fe/"><strong>Ver servicio en Santa Fe →</strong></a></p>
         </div>
         <div class="windows-artwork"><img src="assets/windows-instalacion.svg" width="1200" height="760" loading="lazy" decoding="async" alt="PC de escritorio y notebook preparadas para una instalación limpia de Windows"></div>
       </div>
     </section>
 
-    <section class="solutions" id="soluciones"><div class="container"><div class="heading"><div><span class="kicker">Qué puedo resolver</span><h2>Menos vueltas.<br>Más control.</h2></div><p>Cada negocio tiene su propia lógica. El sistema tiene que adaptarse a vos y no al revés.</p></div><div class="solution-grid"><article class="solution"><span class="solution-icon" aria-hidden="true">$</span><h3>Ventas y cobros</h3><p>Registrá operaciones y seguí lo que entra.</p></article><article class="solution"><span class="solution-icon" aria-hidden="true">▦</span><h3>Stock y productos</h3><p>Sabé qué tenés y qué necesitás reponer.</p></article><article class="solution"><span class="solution-icon" aria-hidden="true">↗</span><h3>Reportes</h3><p>Entendé tu negocio con datos claros.</p></article><article class="solution"><span class="solution-icon" aria-hidden="true">◉</span><h3>Clientes y proveedores</h3><p>Movimientos, historial y cuentas corrientes.</p></article><article class="solution"><span class="solution-icon" aria-hidden="true">▣</span><h3>Páginas y catálogos</h3><p>Mostrá lo que hacés y recibí consultas.</p></article><article class="solution"><span class="solution-icon" aria-hidden="true">✓</span><h3>Pedidos</h3><p>Seguí cada operación hasta la entrega.</p></article></div></div></section>
+    <section class="solutions" id="soluciones"><div class="container"><div class="heading"><div><span class="kicker">Qué puedo resolver</span><h2>Menos vueltas.<br>Más control.</h2></div><p>Software, sistemas de gestión y páginas web para negocios de Santa Fe. Cada comercio tiene su lógica: la herramienta tiene que adaptarse a vos y no al revés.</p></div><div class="solution-grid"><a class="solution" href="sistema-ventas-stock-santa-fe/" aria-label="Sistema de ventas y stock en Santa Fe"><span class="solution-icon" aria-hidden="true">$</span><h3>Ventas y cobros</h3><p>Registrá operaciones y seguí lo que entra.</p></a><a class="solution" href="sistema-ventas-stock-santa-fe/" aria-label="Sistema de stock para comercios en Santa Fe"><span class="solution-icon" aria-hidden="true">▦</span><h3>Stock y productos</h3><p>Sabé qué tenés y qué necesitás reponer.</p></a><a class="solution" href="software-a-medida-santa-fe/" aria-label="Software a medida en Santa Fe"><span class="solution-icon" aria-hidden="true">↗</span><h3>Reportes</h3><p>Entendé tu negocio con datos claros.</p></a><a class="solution" href="software-para-comercios-santa-fe/" aria-label="Software para comercios en Santa Fe"><span class="solution-icon" aria-hidden="true">◉</span><h3>Clientes y proveedores</h3><p>Movimientos, historial y cuentas corrientes.</p></a><a class="solution" href="paginas-web-santa-fe/" aria-label="Páginas web en Santa Fe"><span class="solution-icon" aria-hidden="true">▣</span><h3>Páginas y catálogos</h3><p>Mostrá lo que hacés y recibí consultas.</p></a><a class="solution" href="software-para-comercios-santa-fe/" aria-label="Sistemas de pedidos para comercios en Santa Fe"><span class="solution-icon" aria-hidden="true">✓</span><h3>Pedidos</h3><p>Seguí cada operación hasta la entrega.</p></a></div></div></section>
 
     <section class="method"><div class="container method-box"><span class="kicker">Así trabajamos</span><h2>Primero entendemos<br>tu negocio.</h2><p>Sin paquetes enormes ni funciones que nunca vas a usar. La idea es construir una herramienta que realmente te simplifique el trabajo.</p><div class="steps"><article class="step"><span class="step-number">PASO 01</span><h3>Me contás qué necesitás</h3><p>Vemos cómo trabajás y qué querés mejorar.</p></article><article class="step"><span class="step-number">PASO 02</span><h3>Pensamos una solución</h3><p>Definimos lo importante, sin complicaciones.</p></article><article class="step"><span class="step-number">PASO 03</span><h3>La probamos y ajustamos</h3><p>Mejoramos con situaciones reales del negocio.</p></article></div></div></section>
 
     <section class="contact" id="contacto"><div class="container contact-box"><div><span class="kicker">¿Lo charlamos?</span><h2>Contame qué<br>necesitás.</h2><p>Ya sea una página web, un sistema a medida o dejar tu PC lista para usar, escribime y vemos la mejor opción.</p></div><a class="contact-button" href="https://wa.me/5493425052154?text=Hola%20TatenSoft%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.45A11.8 11.8 0 0 0 .34 11.8c0 2.08.54 4.1 1.57 5.88L.24 23.76l6.25-1.64a11.8 11.8 0 0 0 5.64 1.44h.01A11.8 11.8 0 0 0 20.5 3.45Zm-8.36 18.12h-.01a9.77 9.77 0 0 1-4.98-1.37l-.36-.22-3.71.97.99-3.61-.24-.37a9.77 9.77 0 1 1 8.31 4.6Zm5.36-7.32c-.29-.15-1.74-.86-2.01-.96-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.15-.17.19-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.09-.19.04-.37-.03-.51-.07-.15-.66-1.59-.9-2.17-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.52.07-.79.36-.27.29-1.03 1.01-1.03 2.46 0 1.44 1.05 2.84 1.2 3.04.15.19 2.06 3.14 5 4.41.7.3 1.25.48 1.67.61.7.22 1.33.19 1.83.12.56-.08 1.74-.71 1.98-1.4.25-.69.25-1.27.17-1.39-.07-.12-.26-.19-.55-.33Z"/></svg>Escribime por WhatsApp</a></div></section>
   </main>
 
-  <footer><div class="container footer-inner"><span><strong>TatenSoft</strong> · Software y soporte técnico en Santa Fe</span><span>© 2026 · Hecho para negocios reales.</span></div></footer>
+  <footer><div class="container footer-inner"><span><strong>TatenSoft</strong> · Software, páginas web y soporte técnico en Santa Fe</span><span><a href="software-a-medida-santa-fe/">Software a medida</a> · <a href="paginas-web-santa-fe/">Páginas web</a> · © 2026</span></div></footer>
   <script>
     (() => {
       const canAnimate = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
