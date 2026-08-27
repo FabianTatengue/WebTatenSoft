@@ -2,21 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://fabiantatengue.github.io/WebTatenSoft/</loc>
-    <lastmod>2026-08-22</lastmod>
-    <image:image>
-      <image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-principal.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-ro.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-almacen.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-mariel.webp</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-mr.webp</image:loc>
-    </image:image>
+    <lastmod>2026-08-27</lastmod>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-principal.webp</image:loc></image:image>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-ro.webp</image:loc></image:image>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-almacen.webp</image:loc></image:image>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-mariel.webp</image:loc></image:image>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-mr.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://fabiantatengue.github.io/WebTatenSoft/software-a-medida-santa-fe/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-principal.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://fabiantatengue.github.io/WebTatenSoft/software-para-comercios-santa-fe/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-almacen.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://fabiantatengue.github.io/WebTatenSoft/sistema-ventas-stock-santa-fe/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-almacen.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://fabiantatengue.github.io/WebTatenSoft/paginas-web-santa-fe/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <image:image><image:loc>https://fabiantatengue.github.io/WebTatenSoft/assets/presentacion-mr.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://fabiantatengue.github.io/WebTatenSoft/instalacion-windows-santa-fe/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
 </urlset>
